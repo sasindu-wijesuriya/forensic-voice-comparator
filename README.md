@@ -1,3 +1,4 @@
+
 # Forensic Voice Comparator
 
 This is a voice comparator which can be used for forensic voice analysis purposes.
@@ -77,3 +78,26 @@ Vice versa, **high negative log likelihoods mean that the evidence is much more 
 
 This results representation fits perfectly with the widely accepted **Bayesian paradigm** of expressing the strength of evidence instead of a binary decision.
 
+
+
+# Algorithm to use
+
+The algorithms widely used for this voice recognition are **LPC Analysis** and **MFCC (Mel Frequency Cepstral Coefficients)**.  Among these algorithms, the best and most used algorithm for voice recognition is MFCC. 
+
+This survey paper compares the algorithms available for voice comparison.
+[Voice Recognition and Voice Comparison using Machine Learning Techniques: A Survey - 2020 6th International Conference on Advanced Computing and Communication Systems (ICACCS)](https://ieeexplore.ieee.org/abstract/document/9074184/)
+
+Although the MFCC algorithm is older, that algorithm is proven to be much stable and suitable for voice comparison than the other algorithms.
+
+
+## MFCC (Mel Frequency Cepstral Coefficients) algorithm
+
+In sound processing, the "*mel-frequency cepstrum*" (MFC) is a representation of the short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear mel scale of frequency.
+
+Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC.
+
+We can use a software like MATLAB to analyze and find the similarity between two voice samples with MFCC. 
+
+![Block Diagram of MFCC](https://www.researchgate.net/profile/Ismail-Shahin/publication/332408428/figure/fig1/AS:832672989466625@1575536119285/Block-diagram-of-MFCC-algorithm.png)
+
+For MFCC to accurately compare two voice samples, the voice sample must be pre-processed. The voice samples must be filtered, de-noised and should contain only the relevant speech sample.
