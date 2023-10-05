@@ -101,3 +101,16 @@ We can use a software like MATLAB to analyze and find the similarity between two
 ![Block Diagram of MFCC](https://www.researchgate.net/profile/Ismail-Shahin/publication/332408428/figure/fig1/AS:832672989466625@1575536119285/Block-diagram-of-MFCC-algorithm.png)
 
 For MFCC to accurately compare two voice samples, the voice sample must be pre-processed. The voice samples must be filtered, de-noised and should contain only the relevant speech sample.
+
+
+# Changes in plan
+
+## Problems with using the whole speech
+
+When we apply MFCC for two speakers and find the differences between MFCC coefficients, we get unpredictable numbers.
+This number is heavily dependant on the length of the recording.
+
+## Solution
+
+I'm trying to split the speech into words and compare, so that the length of the words is not very different. 
+I'm using the pydub library for splitting the speech with the spaces. 
